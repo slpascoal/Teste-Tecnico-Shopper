@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    container_name: my_node_app
+    restart: always
+    ports:
+      - '5000:5000'
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    volumes:
+      - ./uploads:/app/uploads
+
+  mongo:
+    image: mongo:7
+    container_name: my_mongo_db
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
