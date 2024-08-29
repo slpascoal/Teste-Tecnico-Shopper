@@ -1,22 +1,22 @@
-# Use a imagem oficial do Node.js como base
+# Usar Node.js como base
 FROM node:22-alpine
 
-# Define o diretório de trabalho
+# Diretório de trabalho
 WORKDIR /app
 
 # Copia o package.json e package-lock.json
 COPY package*.json ./
 
-# Instala as dependências
+# Instala as dependências necessárias
 RUN npm install
 
-# Copia o restante do código da aplicação para o contêiner
+# Copia o restante do código para o contêiner
 COPY . .
 
-# Compila o projeto TypeScript
+# Compila a aplicação
 RUN npm run build
 
-# Expõe a porta que a aplicação irá usar
+# Porta que será usada
 EXPOSE 5000
 
 # Comando para rodar a aplicação

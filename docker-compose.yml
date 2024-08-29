@@ -1,4 +1,6 @@
 services:
+  
+  # Informações sobre o servidor do app
   app:
     build: .
     container_name: my_node_app
@@ -14,6 +16,7 @@ services:
     volumes:
       - ./uploads:/app/uploads
 
+  # Informações sobre o servidor do bd
   mongo:
     image: mongo:7
     container_name: my_mongo_db
