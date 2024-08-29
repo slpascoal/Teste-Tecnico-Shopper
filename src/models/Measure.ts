@@ -10,7 +10,7 @@ interface IMeasure {
   has_confirmed: boolean;
 }
 
-const measureSchema = new Schema<IMeasure>({
+const measureSchema : any = new Schema<IMeasure>({
   customer_code: { type: String, required: true },
   measure_datetime: { type: Date, required: true },
   measure_type: { type: String, enum: ['WATER', 'GAS'], required: true },

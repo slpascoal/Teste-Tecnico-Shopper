@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { uploadMeasure, confirmMeasure, listMeasures } from '../controllers/measureController';
 
-const router = Router();
+const router : Router = Router();
 
 router.post('/upload', uploadMeasure);
 router.patch('/confirm', confirmMeasure);
