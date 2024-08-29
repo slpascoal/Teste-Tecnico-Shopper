@@ -2,8 +2,6 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/database';
 import measureRoutes from './routes/measureRoutes';
-import path from 'path';
-
 
 dotenv.config();
 
