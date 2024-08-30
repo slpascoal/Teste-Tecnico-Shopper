@@ -18,6 +18,7 @@ No desenvolvimento, usei os seguintes npm install:
 
 ## Arquivo .env
 É necessario criar um arquivo `.env` na raiz do programa contendo uma variavel para o caminho do Banco de Dados MongoDB e API Gemini.
+<br />
 Siga esse padrão:
 ~~~
 MONGO_URI=mongodb://localhost:<porta>/<nome do bd>
@@ -34,6 +35,7 @@ Para usar a aplicação (consumir a API) é necessário usar algum software. Eu 
 ### POST
 Endereço: 
   `http://localhost:<porta da aplicação>/api/measures/upload`
+<br />
 Body JSON: 
 ~~~
   {
@@ -47,6 +49,7 @@ Body JSON:
 ### PATCH
 Endereço: 
   `http://localhost:<porta da aplicação>/api/measures/confirm`
+<br />
 Body JSON: 
 ~~~
   {
@@ -58,6 +61,7 @@ Body JSON:
 ### GET
 Endereço: 
   `http://localhost:<porta da aplicação>/api/measures/<customer_code>/list`
+<br />
 Opcional - QUERY PARAMETERS : 
 ~~~
   measure_type : <"WATER" ou "GAS">
