@@ -1,8 +1,14 @@
 # Teste Tecnico Shopper
 Aplicação desenvolvida como um teste técnico para a vaga de Desenvolvedor Full-Stack Júnior
 
-## Dependencias Necessárias
-Para essa aplicação funcionar, é necessário instalar:
+## Requisitos
+Para rodar a aplicação sem instalar dependências, npm install, etc... você pode executar o Docker. Mas é necessário ter instalado em sua máquina:
+
+### `Node.js`
+### `Docker (eu uso o Docker Desktop, mais prático)`
+
+## NPM Install
+No desenvolvimento, usei os seguintes npm install:
 
 ### `npm install`
 ### `npm install express mongoose dotenv axios uuid`
