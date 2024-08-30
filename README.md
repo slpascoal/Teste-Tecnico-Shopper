@@ -28,6 +28,41 @@ GEMINI_API_KEY=<chave api>
 Para executar a aplicação, que está 100% dockerizada, execute o comando:
 ### `docker-compose up --build`
 
+## Como usar?
+Para usar a aplicação (consumir a API) é necessário usar algum software. Eu uso o Insomnia:
+
+### POST
+Endereço: 
+  `http://localhost:<porta da aplicação>/api/measures/upload`
+Body JSON: 
+~~~
+  {
+    "image": "", <-- iamgem da conta de agua ou luz em base64
+    "customer_code": "12345", <--- numero aleatorio
+    "measure_datetime": "2023-02-27T10:00:00Z", <-- coloque nesse formato
+    "measure_type": <"WATER" ou "GAS">
+  }
+~~~
+
+### PATCH
+Endereço: 
+  `http://localhost:<porta da aplicação>/api/measures/confirm`
+Body JSON: 
+~~~
+  {
+    "measure_uuid": <pegar measure_uuid gerado no POST anterior>,
+    "confirmed_value": 120
+  }
+~~~
+
+### GET
+Endereço: 
+  `http://localhost:<porta da aplicação>/api/measures/<customer_code>/list`
+Opcional - QUERY PARAMETERS : 
+~~~
+  measure_type : <"WATER" ou "GAS">
+~~~
+
 ## Testes Unitários
 Essa aplicação possui testes unitários, que podem ser executados com o comando:
 ### `npm test`
