@@ -1,3 +1,5 @@
+// testa nosso serviço Measure (de criação ao chamar o POST)
+
 import { Measure } from '../models/Measure';
 
 jest.mock('../models/Measure');

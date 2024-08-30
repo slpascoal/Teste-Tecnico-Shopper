@@ -1,5 +1,6 @@
 {
   "name": "fullstack-shopper",
+  "author": "Silas Lopes Pascoal <slpascoal01@gmail.com>",
   "description": "",
   "scripts": {
     "build": "tsc",

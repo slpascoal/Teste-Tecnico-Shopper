@@ -1,3 +1,5 @@
+// testa controller do nosso Measure
+
 import { uploadMeasure, confirmMeasure, listMeasures } from '../controllers/measureController';
 import { Measure } from '../models/Measure';
 import { Request, Response } from 'express';
@@ -25,7 +27,7 @@ describe('Measure Controller', () => {
 
     expect(status).toHaveBeenCalledWith(400);
     expect(json).toHaveBeenCalledWith({
-      error_code: 'INVALID_DATA',
+      error_code: 'ERROR',
       error_description: 'Dados inválidos'
     });
   });

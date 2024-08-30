@@ -1,3 +1,5 @@
+// testa a conexão ao bd
+
 import mongoose from 'mongoose';
 import { connectDB } from '../config/database';
 

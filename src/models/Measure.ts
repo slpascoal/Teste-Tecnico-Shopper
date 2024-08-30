@@ -1,5 +1,9 @@
+/* 
+  importação das bibliotecas e dependencias necessárias do mongoose
+*/
 import { Schema, model } from 'mongoose';
 
+// interface para instanciar os dados de maniera mais prática 
 interface IMeasure {
   customer_code: string;
   measure_datetime: Date;
@@ -10,6 +14,7 @@ interface IMeasure {
   has_confirmed: boolean;
 }
 
+// estrutura do nosso measure, que será armazenado no bd
 const measureSchema : any = new Schema<IMeasure>({
   customer_code: { type: String, required: true },
   measure_datetime: { type: Date, required: true },
@@ -20,4 +25,5 @@ const measureSchema : any = new Schema<IMeasure>({
   has_confirmed: { type: Boolean, default: false },
 });
 
+// exporta o Measure
 export const Measure = model<IMeasure>('Measure', measureSchema);

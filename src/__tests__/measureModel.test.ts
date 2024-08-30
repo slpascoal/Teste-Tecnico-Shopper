@@ -1,3 +1,5 @@
+// teste o modelo do nosso Measure
+
 import { Measure } from '../models/Measure';
 
 describe('Measure Model', () => {
