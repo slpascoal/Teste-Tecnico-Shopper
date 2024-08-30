@@ -24,6 +24,8 @@ Siga esse padrão:
 MONGO_URI=mongodb://localhost:<porta>/<nome do bd>
 GEMINI_API_KEY=<chave api>
 ~~~
+<br />
+Obs: Caso não coloque o "MONGO_URI", será considerado outro endereço padrão.
 
 ## Executar
 Para executar a aplicação, que está 100% dockerizada, execute o comando:
